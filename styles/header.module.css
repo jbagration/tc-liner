@@ -1,0 +1,261 @@
+.header {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0;
+  height: 70px;
+  background-color: var(--main-bg-color);
+}
+.firstPart,
+.secondPart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 5px;
+  width: 1200px;
+  margin: 0 auto;
+}
+.firstPart {
+  border-bottom: 1px solid #a8a8a8;
+  margin-top: 30px;
+  z-index: 1;
+  background-color: var(--main-bg-color);
+}
+.firstPartContainer {
+  width: 100vw;
+  background-color: #fff;
+}
+.secondPartContainer {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  width: 100vw;
+  background-color: #fff;
+  margin: 0 auto;
+  padding-top: 10px;
+  background-color: var(--main-bg-color);
+  transition: opacity 0.5s ease, margin-top 0.5s ease;
+}
+.overlay {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0s linear 0.5s;
+}
+
+.menu-content {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100%;
+  background-color: var(--secondary-bg-color);
+  color: var(--text-color);
+  padding: 10px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  transform: translateX(400px);
+  transition: transform ease-in-out 0.5s;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.menuOpen .overlay,
+.menuOpen .menu-content {
+  overflow: hidden;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease, visibility 0s linear 0.5s;
+}
+
+.menuOpen .menu-content {
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  transition: transform ease-in-out 0.5s;
+  transform: translate(0, 0);
+  z-index: 99999999;
+  max-width: 320px;
+  background-color: var(--secondary-bg-color);
+}
+
+.menuButton {
+  display: flex;
+  align-items: center;
+  border: 1px solid #727272;
+  padding: 0px 6px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 35px;
+  margin-bottom: 20px;
+}
+
+.menuText {
+  margin-right: 10px;
+}
+
+.left,
+.right {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 17px;
+  gap: 10px;
+}
+
+.left p,
+.middle p {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+.middle {
+  display: flex;
+  gap: 71px;
+  margin-right: 180px;
+  margin-bottom: 17px;
+}
+
+.right {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 17px;
+}
+
+.logoContainer,
+.centerContainer {
+  display: flex;
+  align-items: center;
+  margin-top: -16px;
+}
+
+.centeredList {
+  text-transform: uppercase;
+  list-style: none;
+  display: flex;
+  gap: 48px;
+  font-size: 13px;
+  width: 100%;
+  line-height: 20px;
+}
+
+.closeButton {
+  align-self: flex-end;
+  font-size: 24px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  position: fixed;
+  right: 10px;
+  top: 15px;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  bottom: 40px;
+  left: 50px;
+}
+
+.menu-content ul {
+  list-style: none;
+  padding-top: 50px;
+  padding-left: 50px;
+}
+
+.menu-content ul li {
+  margin-bottom: 25px;
+}
+
+body.modalOpen body {
+  width: calc((100vw - 1220px) / 2);
+}
+@media only screen and (max-width: 1024px) {
+.secondPart, .firstPart {
+  width: 960px ;
+}
+}
+@media only screen and (max-width: 960px) {
+  .header {
+    margin-top: -90px;
+  }
+  .secondPartContainer {
+    margin-top: 0px !important;
+  }
+  .firstPart {
+    border: none;
+    margin-top: 0px;
+  }
+  .secondPart {
+    height: 80px;
+  }
+.firstPart, .secondPart {
+  width: 637px;
+}
+  .left,
+  .right {
+    display: none;
+  }
+  .middle {
+    margin-left: 270px;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 99;
+    margin-top:100px;
+  }
+  .centeredList {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 637px) {
+  .middle {
+    display: none;
+  }
+  .firstPart, .secondPart {
+    width: 360px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .header {
+    margin-top: -90px;
+  }
+  .secondPartContainer {
+    margin-top: 0px !important;
+  }
+  .firstPart {
+    margin: 0;
+  }
+  .logoContainer {
+    display: none;
+  }
+
+  .secondPart {
+    padding: 10px 0;
+    margin: 0 auto;
+    justify-content: center;
+    width: 150px;
+  }
+
+  .sticky .secondPart {
+    padding: 0px 0;
+  }
+}
