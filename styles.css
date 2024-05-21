@@ -1,0 +1,50 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@font-face {
+  font-family: 'TildaSans';
+  src: url('./public/fonts/TildaSans-VF_TTF_Web/TildaSans-VF_TTF_Web/TildaSans-VF.woff2') format('woff2'),
+       url('./public/fonts/TildaSans-VF_TTF_Web/TildaSans-VF_TTF_Web/TildaSans-VF.woff') format('woff');
+}
+
+body {
+  color: #2e2e2e;
+  --borderRadiusContainer: 16px;
+  --widthIcon: 40px;
+  --heightIcon: 40px;
+  --opacityHover: 0.7;
+  --tansitionHover: .3s ease-in-out;
+  --overflow: hidden;
+  --arrowDisplay: block;
+  -webkit-font-smoothing: antialiased;
+  visibility: visible;
+  -webkit-text-size-adjust: 100%;
+  font-family: 'TildaSans',Arial,sans-serif;
+  font-weight: 400;
+  line-height: 22px;
+  margin: 0 auto;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+  outline: none;
+  max-width: 100vw;
+  overflow-x: hidden; 
+}
+
+:root {
+  --main-bg-color: #fff;
+  --secondary-bg-color: #2e2e2e;
+  --text-color: #ffffff;
+  --borderRadiusContainer: 16px;
+  --widthIcon: 40px;
+  --heightIcon: 40px;
+  --opacityHover: 0.7;
+  --tansitionHover: 0.3s ease-in-out;
+  --arrowDisplay: block;
+  box-sizing: content-box;
+  margin: 0px;
+}
+
+li {
+  cursor: pointer;
+}

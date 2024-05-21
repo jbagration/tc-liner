@@ -1,0 +1,44 @@
+{
+  "name": "tc-frontend-git",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "start": "next start -p 4257",
+    "start:dev": "next dev",
+    "start:preprod": "next build && NODE_ENV=preprod next start",
+    "start:prod": "next build && NODE_ENV=production next start",
+    "start:local": "next build && NODE_ENV=local next start"
+  },
+  "dependencies": {
+    "@types/react-leaflet": "^3.0.0",
+    "axios": "^1.6.2",
+    "leaflet": "^1.9.4",
+    "lodash": "^4.17.21",
+    "next": "14.0.3",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-icons": "^4.12.0",
+    "react-leaflet": "^4.2.1",
+    "react-modal-image": "^2.6.0",
+    "react-slick": "^0.29.0",
+    "react-use": "^17.4.2",
+    "slick-carousel": "^1.8.1",
+    "transliteration": "^2.3.5"
+  },
+  "devDependencies": {
+    "@types/leaflet": "^1.9.8",
+    "@types/lodash": "^4.14.202",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/react-modal-image": "^2.6.3",
+    "@types/react-slick": "^0.23.12",
+    "autoprefixer": "^10.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.3",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
+  }
+}
